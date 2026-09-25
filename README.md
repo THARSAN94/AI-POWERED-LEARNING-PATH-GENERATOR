@@ -4,7 +4,7 @@
 
 # Lonexora Skills — AI-Powered Learning Path Generator
 
-Lonexora Skills generates day-by-day AI learning roadmaps, daily assessments and
+Lonexora Skills generates day-by-day AI learning roadmaps, daily assessments and 
 verifiable completion certificates. Includes everything you need to run and deploy the app.
 
 View your app in AI Studio: https://ai.studio/apps/509dd427-3638-4423-b942-8fb62e95c2c9
