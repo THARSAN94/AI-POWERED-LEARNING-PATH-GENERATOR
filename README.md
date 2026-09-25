@@ -8,8 +8,3 @@
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app: https://ai-powered-learning-path-generator-1.onrender.com
    `npm run dev`
-
-der's free
-instance filesystem is ephemeral, so that file is reset on every redeploy or
-cold-start-driven restart. Attach a Render Disk (or swap in a managed database) if
-you need data to survive deploys.
