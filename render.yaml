@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: lonexora-skills
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      # Render's default Node may be older than Vite 8 requires (^20.19.0 || >=22.12.0).
+      - key: NODE_VERSION
+        value: 22
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_API_KEY
+        sync: false
+      # Set to the deployed URL (e.g. https://lonexora-skills.onrender.com) so
+      # certificate verification links and QR codes resolve to the live domain.
+      - key: APP_URL
+        sync: false

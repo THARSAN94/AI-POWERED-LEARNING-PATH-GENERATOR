@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display-active: 'Libre Baskerville', 'Baskervville', 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-sans-active: 'Libre Baskerville', 'Baskervville', 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-mono-active: 'JetBrains Mono', monospace;
+  }
+
+  [data-font="brakestone"] {
+    --font-display-active: 'Libre Baskerville', 'Baskervville', 'Playfair Display', Georgia, serif;
+    --font-sans-active: 'Libre Baskerville', 'Baskervville', 'Playfair Display', Georgia, serif;
+  }
+
+  [data-font="baskervville"] {
+    --font-display-active: 'Baskervville', 'Libre Baskerville', Georgia, serif;
+    --font-sans-active: 'Baskervville', 'Libre Baskerville', Georgia, serif;
+  }
+
+  [data-font="playfair"] {
+    --font-display-active: 'Playfair Display', 'Libre Baskerville', Georgia, serif;
+    --font-sans-active: 'Playfair Display', 'Libre Baskerville', Georgia, serif;
+  }
+
+  [data-font="cormorant"] {
+    --font-display-active: 'Cormorant Garamond', Garamond, Georgia, serif;
+    --font-sans-active: 'Cormorant Garamond', Garamond, Georgia, serif;
+  }
+
+  [data-font="outfit"] {
+    --font-display-active: 'Outfit', sans-serif;
+    --font-sans-active: 'Outfit', sans-serif;
+  }
+
+  html, body {
+    font-family: var(--font-sans-active);
+    background-color: #08090D;
+    color: #F1F5F9;
+    letter-spacing: 0.005em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--font-display-active) !important;
+    letter-spacing: -0.015em;
+  }
+
+  .font-sans, p, span, div, a, button, input, select, textarea, label {
+    font-family: var(--font-sans-active);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono-active) !important;
+  }
+}
+
+/* Crisp technical hairline grid pattern */
+.bg-tech-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-tech-dots {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+}
+
+/* Subtle glass surface */
+.surface-card {
+  background-color: #0E1017;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.surface-card-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.surface-card-hover:hover {
+  background-color: #12151F;
+  border-color: rgba(59, 130, 246, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Certificate Guilloche and Ornamental Corners */
+.certificate-frame {
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(217, 119, 6, 0.25);
+}
+
+/* Clean custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08090D;
+}
+::-webkit-scrollbar-thumb {
+  background: #1F2430;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333A4D;
+}

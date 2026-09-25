@@ -1,0 +1,12 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+bun.lock*
+
+# Runtime JSON data store (auto-created & seeded by server/db.ts on first boot)
+data/

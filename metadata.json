@@ -1,0 +1,6 @@
+{
+  "name": "Lonexora Skills - AI-Powered Learning Path Generator",
+  "description": "Full-stack AI-powered learning path generator for Lonexora Skills featuring personalized roadmaps, interactive daily timers, 10-question assessments, performance analytics, and verifiable certificates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
