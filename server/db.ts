@@ -124,6 +124,12 @@ export interface DatabaseSchema {
 const DATA_DIR = path.resolve(process.cwd(), 'data');
 const DB_FILE = path.join(DATA_DIR, 'lonexora_db.json');
 
+// Seeded demo certificates must point at the public host, not a local port.
+// On Render APP_URL is injected by the platform before the process starts.
+const APP_BASE_URL =
+  process.env.APP_URL ||
+  (process.env.PORT ? `http://localhost:${process.env.PORT}` : 'http://localhost:3000');
+
 function hashPassword(password: string, salt: string): string {
   return crypto.scryptSync(password, salt, 64).toString('hex');
 }
@@ -322,7 +328,7 @@ Ensure that all async effects clean up subscription handles upon unmounting to p
       averageScore: 94,
       completionDate: '2026-03-15',
       qrCodeDataUrl: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><rect x="10" y="10" width="20" height="20" fill="black"/><rect x="70" y="10" width="20" height="20" fill="black"/><rect x="10" y="70" width="20" height="20" fill="black"/><rect x="40" y="40" width="20" height="20" fill="black"/><rect x="50" y="20" width="10" height="10" fill="black"/><rect x="20" y="50" width="10" height="10" fill="black"/><rect x="70" y="60" width="20" height="10" fill="black"/><rect x="60" y="80" width="10" height="10" fill="black"/></svg>',
-      verificationUrl: `http://localhost:3000/verify/${certCode}`,
+      verificationUrl: `${APP_BASE_URL}/verify/${certCode}`,
     });
   }
 
