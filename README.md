@@ -2,9 +2,10 @@
 <img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
 </div>
 
-# Run and deploy your AI Studio app
+# Lonexora Skills — AI-Powered Learning Path Generator
 
-This contains everything you need to run your app locally.
+Lonexora Skills generates day-by-day AI learning roadmaps, daily assessments and
+verifiable completion certificates. Includes everything you need to run and deploy the app.
 
 View your app in AI Studio: https://ai.studio/apps/509dd427-3638-4423-b942-8fb62e95c2c9
 
